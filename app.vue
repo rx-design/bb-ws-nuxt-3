@@ -1,4 +1,5 @@
 <template>
+  <NavigationBar />
   <div class="columns is-centered">
     <div class="column is-one-third">
       <ProductCard v-bind="state"/>
@@ -7,8 +8,10 @@
 </template>
 
 <script setup>
+  const { t } = useI18n()
+
   const state = reactive({
-    productName: 'Bigbank Jacket',
+    productName: computed(() => t('jacket')),
     productPrice: '€50',
     arrivalLabel: 'Estimated arrival on:',
     arrivalDate: 'Friday, 01-09',
