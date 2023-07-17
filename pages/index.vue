@@ -1,5 +1,4 @@
 <template>
-  <NavigationBar />
   <div class="columns is-centered">
     <div class="column is-one-third">
       <ProductCard v-bind="state"/>
