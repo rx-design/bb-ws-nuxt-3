@@ -4,7 +4,8 @@ export default defineNuxtConfig({
     '@/assets/css/main.css'
   ],
   modules: [
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@pinia/nuxt'
   ],
   i18n: {
     vueI18n: './i18n.config.ts',
@@ -17,6 +18,17 @@ export default defineNuxtConfig({
         code: 'et',
         name: 'Eesti'
       }
+    ]
+  },
+  pinia: {
+    autoImports: [
+      'defineStore',
+      'storeToRefs'
+    ]
+  },
+  imports: {
+    dirs: [
+      'stores'
     ]
   },
   devtools: { enabled: true }

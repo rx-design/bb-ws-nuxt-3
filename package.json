@@ -8,10 +8,17 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
+    "pinia": "^2.1.4"
+  },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/i18n": "^8.0.0-beta.13",
     "@types/node": "^18.17.0",
     "nuxt": "^3.6.5"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

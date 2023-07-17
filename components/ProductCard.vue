@@ -33,9 +33,15 @@
       </div>
     </div>
     <footer class="card-footer">
-      <a href="#" class="card-footer-item">
+      <button
+        class="button is-primary is-radiusless is-shadowless card-footer-item"
+        @click="addProduct({
+          id: 1,
+          price: 50,
+        })"
+      >
         {{ submitButtonLabel }}
-      </a>
+      </button>
     </footer>
   </div>
 </template>
@@ -49,6 +55,8 @@
     submitButtonLabel: string
     title: string
   }>()
+
+  const { addProduct } = useCartStore()
 </script>
 
 <style>
